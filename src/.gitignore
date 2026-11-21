@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment variables (API keys, passwords ආරක්ෂා කරගන්න)
+.env
+.env.local
+
+# Production build files
+dist/
+build/
+.next/
+
+# OS generated files
+.DS_Store
+Thumbs.db
