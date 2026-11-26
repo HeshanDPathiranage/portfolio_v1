@@ -26,14 +26,14 @@ export const Projects: React.FC = () => {
       id: "02",
       title: "BSTORE E-Commerce",
       category: "E-Commerce",
-      tagCategory: "Retail Platform",
+      tagCategory: "Retail Marketplace",
       description:
-        "A responsive full-stack e-commerce platform built for a textile business, focused on smooth checkout flows and inventory syncing.",
-      tags: ["React", "Spring Boot", "Stripe", "REST"],
+        "A full-stack e-commerce marketplace built with React and Java Spring Boot, containerized with Docker and deployed on Render. Features responsive catalog browsing, real-time inventory management, secure authentication, and seamless checkout.",
+      tags: ["React", "Spring Boot", "Docker", "Render", "Java", "REST API"],
       image:
         "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
-      link: "#",
-      featured: false,
+      link: "https://bstore-yt6f.onrender.com/",
+      featured: true,
     },
     {
       id: "03",
@@ -143,17 +143,29 @@ export const Projects: React.FC = () => {
                     <a
                       href={project.link}
                       target={project.link.startsWith("http") ? "_blank" : undefined}
-                      rel="noreferrer"
+                      rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="btn btn-primary"
                       style={{ padding: "8px 14px", fontSize: "12px" }}
                     >
-                      View Live <ArrowUpRight size={14} />
+                      Live Demo <ArrowUpRight size={14} />
                     </a>
                   </div>
                 </div>
 
                 <div className="project-body">
-                  <span className="project-category">{project.tagCategory}</span>
+                  <div className="project-body-header">
+                    <span className="project-category">{project.tagCategory}</span>
+                    {project.link.startsWith("http") && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-live-badge"
+                      >
+                        Live Demo <ArrowUpRight size={12} />
+                      </a>
+                    )}
+                  </div>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-summary">{project.description}</p>
 

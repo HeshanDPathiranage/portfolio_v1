@@ -31,10 +31,10 @@ export const projects = [
     name: "BSTORE",
     type: "Full-stack · E-commerce",
     description:
-      "A responsive full-stack e-commerce platform built for a textile business, focused on a smooth user experience and checkout flow.",
-    tags: ["React", "Spring Boot"],
+      "A full-stack e-commerce marketplace built with React and Java Spring Boot (containerized with Docker and deployed on Render). Features responsive catalog browsing, real-time inventory management, and seamless checkout.",
+    tags: ["React", "Spring Boot", "Docker", "Render"],
     color: "peach",
-    href: "#",
+    href: "https://bstore-yt6f.onrender.com/",
   },
   {
     number: "03",
